@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.6.5"
+  },
+  "name": "emptracker",
+  "description": "Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called **content management systems (CMS)**. Your assignment this week is to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinsta624/EmpTracker.git"
+  },
+  "keywords": [
+    "CMS",
+    "by",
+    "SQL"
+  ],
+  "author": "Hanbyeol (Justin)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinsta624/EmpTracker/issues"
+  },
+  "homepage": "https://github.com/justinsta624/EmpTracker#readme"
+}
