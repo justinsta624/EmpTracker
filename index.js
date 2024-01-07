@@ -97,3 +97,6 @@ function DisplayMain() {
         console.error('Error:', error);
     });
 }
+
+// Start the application
+init();
