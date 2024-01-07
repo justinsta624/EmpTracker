@@ -92,11 +92,11 @@ You might also want to include a `seeds.sql` file to pre-populate your database,
 
 
 * `additional functionality`
-    * Update employee managers.
-    * View employees by manager.
-    * View employees by department.
-    * Delete departments, roles, and employees.
-    * View the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department.
+    * `Update employee managers`
+    * `View employees by manager`
+    * `View employees by department`
+    * `Delete departments, roles, and employees`
+    * `View the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department`
 
 
 ## Review
