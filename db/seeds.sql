@@ -7,7 +7,7 @@ VALUES  (1, 'Sales & Marketing'),
         (5, 'Legal');
 
 -- Pre-populate database for role table
-INSERT INTO role (id, title, salary, department_id) 
+INSERT INTO roles (id, title, salary, department_id) 
 VALUES  (1, 'Sales Manager', 160000, 1),
         (2, 'Sales Team Leader', 120000, 1),
         (3, 'Sales Personnel', 80000, 1),        

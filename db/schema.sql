@@ -1,8 +1,5 @@
--- Create the database for employee management
-DROP DATABASE IF EXISTS employee_management_db;
-CREATE DATABASE employee_management_db;
-
-USE employee_management_db;
+-- Create the database for employee bigdata
+CREATE DATABASE employee_bigdata_db;
 
 -- Create the table for the department
 CREATE TABLE department (
