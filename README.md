@@ -91,7 +91,8 @@ You might want to use a separate file that contains functions for performing spe
 You might also want to include a `seeds.sql` file to pre-populate your database, making the development of individual features much easier.
 
 
-* `additional functionality` </br>
+* `additional functionality`
+  </br>
     * Update employee managers
     * View employees by manager
     * View employees by department
