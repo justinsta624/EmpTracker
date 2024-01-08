@@ -6,12 +6,12 @@ require('dotenv').config();
 
 // Import query functions, module exports from queries folder
 const { ViewallDepartments, AddaDepartment, RemoveaDepartment, Viewcombinedsalariesofdepartment } = require('./queries/department.js');
-const { ViewallRoles, AddaRole, RemoveaRole } = require('./queries/roles.js');
-const { Viewallemployees, ViewallEmployeesByDepartment, ViewallEmployeesByManager, AddanEmployee, RemoveanEmployee, UpdateanEmployeeManager } = require('./queries/employee.js');
+const { ViewallRoles, AddaRole, RemoveaRole, UpdateanEmployeeRole } = require('./queries/roles.js');
+const { Viewallemployees, ViewallEmployeesByDepartment, ViewallEmployeesByManager, AddanEmployee, RemoveanEmployee} = require('./queries/employee.js');
 
 // Function to commence the application
 function init() {
-    connection.promise()
+    db.promise()
         .connect()
         .then(() => {
             // Call the function to display main list of options
@@ -27,7 +27,7 @@ function DisplayMain() {
     inquirer.prompt({
         type: 'list',
         name: 'action',
-        message: 'What would you like to do?',
+        message: 'Select the function to proceed',
         choices: [
             'View all Departments',
             'Add a Department',
@@ -41,7 +41,7 @@ function DisplayMain() {
             'View all Employees By Manager',
             'Add an Employee',
             'Remove an Employee',
-            'Update an Employee Manager',
+            'Update an Employee Role',           
             'Exit'
         ]
     })
@@ -57,7 +57,7 @@ function DisplayMain() {
             case 'Remove a Department':
                 return RemoveaDepartment(DisplayMain);
                 break;
-            case 'VView combined salaries of department':
+            case 'View combined salaries of department':
                 return Viewcombinedsalariesofdepartment(DisplayMain);
                 break;
             case 'View all Roles':
@@ -84,8 +84,8 @@ function DisplayMain() {
             case 'Remove an Employee':
                 return RemoveanEmployee(DisplayMain);
                 break;
-            case 'Update an Employee Manager':
-                return UpdateanEmployeeManager(DisplayMain);
+            case 'Update an Employee Role':
+                return UpdateanEmployeeRole(DisplayMain);
                 break;
             case 'Exit':
                 console.log('Exit the bigdata');
