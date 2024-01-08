@@ -1,11 +1,11 @@
 # ⭐ Structured Query Language: Employee Tracker ⭐
     
-![Contributor](https://img.shields.io/badge/Contributor-Hanbyeol(Justin)Lee-purple)
+![Contributor](https://img.shields.io/badge/Contributor-Hanbyeol(Justin)Lee-purple)(https://www.linkedin.com/in/hanbyeol-lee-584232296)
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/license/MIT)
-![GitHub](https://img.shields.io/badge/GitHub-justinsta624-yellow)
-![DataBase](https://img.shields.io/badge/DataBase-MySql2-green)
-![Module](https://img.shields.io/badge/Module-Dotenv-magenta)
-![Installation](https://img.shields.io/badge/Installation-Inquirer@8.2.4-red)
+![GitHub](https://img.shields.io/badge/GitHub-justinsta624-yellow)(https://github.com/justinsta624)
+![DataBase](https://img.shields.io/badge/DataBase-MySql2-green)(https://www.mysql.com)
+![Module](https://img.shields.io/badge/Module-Dotenv-magenta)(https://www.npmjs.com/package/dotenv)
+![Installation](https://img.shields.io/badge/Installation-Inquirer@8.2.4-red)(https://www.npmjs.com/package/inquirer/v/8.2.4)
 
 ## Outcome
 
