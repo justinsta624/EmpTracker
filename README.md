@@ -33,8 +33,8 @@ SO THAT I can organize and plan my business
 ```md
 GIVEN a command-line application that accepts user input
 WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees,
-add a department, add a role, add an employee, and update an employee role
+THEN I am presented with the following options: view all departments, view all roles,
+view all employees, add a department, add a role, add an employee, and update an employee role
 WHEN I choose to view all departments
 THEN I am presented with a formatted table showing department names and department ids
 WHEN I choose to view all roles
@@ -51,7 +51,7 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 is added to the database
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated
-in the database 
+in the database
 ```
 
 ## What to expect for this challenge?
@@ -63,6 +63,7 @@ in the database
 * To provide a link to a walkthrough video that demonstrates its functionality and passes all of the tests. </br>
   [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
 * You might also want to make your queries asynchronous. MySQL2 exposes a `.promise()` function on Connections to upgrade an existing non-Promise connection to use Promises. To learn more and make your queries asynchronous, refer to the [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2).
+* `additional functionality`: Update employee managers, View employees by manager/department, Delete department/roles/employee, View the total utilized budget of a department&mdash; in other words, the combined salaries of all employees in that department
 
 
 ## Design the database schema:
@@ -89,15 +90,6 @@ Your schema should contain the following three tables:
 
 You might want to use a separate file that contains functions for performing specific SQL queries you'll need to use. A constructor function or class could be helpful for organizing these. 
 You might also want to include a `seeds.sql` file to pre-populate your database, making the development of individual features much easier.
-
-
-* `additional functionality`
-  </br>
-    * Update employee managers
-    * View employees by manager
-    * View employees by department
-    * Delete departments, roles, and employees
-    * View the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department
 
 
 ## Review
