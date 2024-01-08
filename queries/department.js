@@ -78,12 +78,12 @@ function RemoveaDepartment(DisplayMain) {
 
 //Function to View combinced salaries of department. 
 function Viewcombinedsalariesofdepartment(DisplayMain) {
+    console.log("hello");
     return db.promise()
-        .query('SELECT department.id, department.name, SUM(role.salary) AS total_budget ' +
-            'FROM employee ' +
-            'INNER JOIN role ON employee.role_id = role.id ' +
-            'INNER JOIN department ON role.department_id = department.id ' +
-            'GROUP BY department.id, department.name')
+        .query('SELECT d.name, SUM(r.salary) AS total_budget ' +
+            'FROM department d ' +
+            'JOIN roles r ON d.id = r.department_id ' +
+            'GROUP BY d.name ')
         .then(([rows]) => {
             console.table(rows);
             DisplayMain();
