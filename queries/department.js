@@ -10,7 +10,7 @@ function ViewallDepartments(DisplayMain) {
             DisplayMain();
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error has been occurred:', error);
             DisplayMain();
         });
 }
@@ -21,10 +21,10 @@ function AddaDepartment(DisplayMain) {
         .prompt({
             type: 'input',
             name: 'NameofDepartment',
-            message: 'What is the name of the department?',
+            message: 'Please enter the department you want to add',
             validate: (input) => {
                 if (input.trim() === '') {
-                    return 'Please enter the department name again.';
+                    return 'Please correct the error and enter again.';
                 }
                 return true;
             },
@@ -35,16 +35,16 @@ function AddaDepartment(DisplayMain) {
             db.promise()
                 .query('INSERT INTO department (name) VALUES (?)', [NameofDepartment])
                 .then(() => {
-                    console.log(`Successfully added ${NameofDepartment} to the database.`);
+                    console.log(`${NameofDepartment} has been successfully added to the database.`);
                     DisplayMain();
                 })
                 .catch((error) => {
-                    console.error('Error:', error);
+                    console.error('Error has been occurred:', error);
                     DisplayMain();
                 });
         })
         .catch((error) => {
-            console.error('Error has occurred:', error);
+            console.error('Error has been occurred:', error);
             DisplayMain();
         });
 }
@@ -58,7 +58,7 @@ function RemoveaDepartment(DisplayMain) {
             return inquirer.prompt({
                 type: 'list',
                 name: 'department_id',
-                message: 'Which department do you want to delete?',
+                message: 'Please choose the department you want to remove',
                 choices: department.map((department) => ({ name: department.name, value: department.id })),
             });
         })
@@ -67,11 +67,11 @@ function RemoveaDepartment(DisplayMain) {
             return db.promise().query('DELETE FROM department WHERE id = ?', [department_id]);
         })
         .then(() => {
-            console.log('data has been successfully deleted.');
+            console.log('data has been successfully removed.');
             DisplayMain();
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error has been occurred:', error);
             DisplayMain();
         });
 }
@@ -89,7 +89,7 @@ function Viewcombinedsalariesofdepartment(DisplayMain) {
             DisplayMain();
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error has been occurred:', error);
             DisplayMain();
         });
 }
