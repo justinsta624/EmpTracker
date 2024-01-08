@@ -24,6 +24,12 @@ function init() {
 }
 
 function DisplayMain() {
+    console.log(`
+    =========== Employee ============
+    =========== & Tracker ===========
+    =================================
+    ==== by. Hanbyeol Justin Lee ====
+    `);
     inquirer.prompt({
         type: 'list',
         name: 'action',
