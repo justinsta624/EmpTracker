@@ -1,7 +1,7 @@
 //Import the mysql2 package
 const mysql = require('mysql2');
 
-// create the connection to database using credentials in protected .env file
+// create the connection to database
 const connection = mysql.createConnection(
     { 
         host: 'localhost',
@@ -13,7 +13,7 @@ const connection = mysql.createConnection(
     connection.connect(function(err) 
     {
         if (err) throw err;
-        console.log(`Connected to the employee bigdata database.`);
+        console.log(`Connected to the employee_bigdata_db`);
     });
 
 module.exports = connection;
