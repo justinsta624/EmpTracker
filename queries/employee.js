@@ -23,7 +23,7 @@ function Viewallemployees(DisplayMain) {
             DisplayMain();
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error has been occurred:', error);
             DisplayMain();
         });
 }
@@ -41,7 +41,7 @@ function ViewallEmployeesByDepartment(DisplayMain) {
             DisplayMain();
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error has been occurred:', error);
             DisplayMain();
         });
 }
@@ -58,7 +58,7 @@ function ViewallEmployeesByManager(DisplayMain) {
             DisplayMain();
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error has been occurred:', error);
             DisplayMain();
         });
 }
@@ -77,10 +77,10 @@ function AddanEmployee(DisplayMain) {
             {
                 type: 'input',
                 name: 'FirstName',
-                message: "What is the first name of the employee?",
+                message: "Please enter the first name of employee you want to add",
                 validate: (input) => {
                     if (input.trim() === '') {
-                        return "Please enter the first name of employee again.";
+                        return "Please correct the error and enter again.";
                     }
                     return true;
                 },
@@ -88,10 +88,10 @@ function AddanEmployee(DisplayMain) {
             {
                 type: 'input',
                 name: 'LastName',
-                message: "What is the last name of the employee?",
+                message: "Please enter the last name of employee you want to add",
                 validate: (input) => {
                     if (input.trim() === '') {
-                        return "Please enter the last name of employee again.";
+                        return "Please correct the error and enter again.";
                     }
                     return true;
                 },
@@ -99,7 +99,7 @@ function AddanEmployee(DisplayMain) {
             {
                 type: 'list',
                 name: 'Role',
-                message: "What is the role of the employee?",
+                message: "Please choose the role of employee you want to add",
                 choices: () => {
                     return db.promise()
                         .query('SELECT title FROM roles')
@@ -109,7 +109,7 @@ function AddanEmployee(DisplayMain) {
             {
                 type: 'list',
                 name: 'Manager',
-                message: "Who is the employee's manager?",
+                message: "Please choose the manager of employee you want to add",
                 choices: viewManagers,
             },
         ])
@@ -121,7 +121,7 @@ function AddanEmployee(DisplayMain) {
                 .query('SELECT id FROM roles WHERE title = ?', [Role])
                 .then(([role]) => {
                     if (!role || role.length === 0) {
-                        console.error('Error has occurred');
+                        console.error('Error has been occurred:');
                         DisplayMain();
                         return;
                     }
@@ -152,17 +152,17 @@ function AddanEmployee(DisplayMain) {
                                     DisplayMain();
                                 })
                                 .catch((error) => {
-                                    console.error('Error:', error);
+                                    console.error('Error has been occurred:', error);
                                     DisplayMain();
                                 });
                         })
                         .catch((error) => {
-                            console.error('Error:', error);
+                            console.error('Error has been occurred:', error);
                             DisplayMain();
                         });
                 })
                 .catch((error) => {
-                    console.error('Error:', error);
+                    console.error('Error has been occurred:', error);
                     DisplayMain();
                 });
         });
@@ -178,7 +178,7 @@ function RemoveanEmployee(DisplayMain) {
             return inquirer.prompt({
                 type: 'list',
                 name: 'employee_id',
-                message: 'Which employee do you want to delete?',
+                message: 'Please choose the name of employee you want to remove',
                 choices: employee.map((employee) => ({ name: employee.employee_name, value: employee.id })),
             });
         })
@@ -187,7 +187,7 @@ function RemoveanEmployee(DisplayMain) {
             return db.promise().query('DELETE FROM employee WHERE id = ?', [employee_id]);
         })
         .then(() => {
-            console.log('data has been successfully deleted.');
+            console.log('data has been successfully removed.');
             DisplayMain();
         })
         .catch((error) => {
